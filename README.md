@@ -33,7 +33,8 @@ All site assets use relative paths so the page works from that project subdirect
 
 - Site-ready copies of manuscript figures live in `assets/images/`. The ignored `manuscript/` directory remains the source of truth for the paper.
 - Replace the paper and video status pills in `index.html` with links when those resources become public.
-- The demonstration stage is a placeholder for a featured video and optional secondary clips.
+- Demonstration and mechanism videos live in `assets/videos/` and are embedded
+  as muted, looping MP4 files.
 - Add official citation text only after the preprint metadata is fixed.
 
 ## Prerecorded Viser viewer

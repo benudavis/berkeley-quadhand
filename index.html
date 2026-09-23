@@ -15,13 +15,13 @@
     >
     <meta
       property="og:image"
-      content="https://benudavis.github.io/berkeley-quadhand/assets/images/frontpage.png"
+      content="https://benudavis.github.io/berkeley-quadhand/assets/images/frontpage.png?v=2"
     >
     <meta property="og:url" content="https://benudavis.github.io/berkeley-quadhand/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://benudavis.github.io/berkeley-quadhand/">
     <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=10">
     <script src="./viewer.js" defer></script>
     <title>Berkeley QUAD Hand</title>
   </head>
@@ -40,112 +40,133 @@
             <span>Chase Kidder<sup>2</sup></span>
             <span>Hannah S. Stuart<sup>1</sup></span>
           </div>
-
           <div class="affiliations">
             <span><sup>1</sup>University of California, Berkeley</span>
             <span><sup>2</sup>General Motors</span>
           </div>
-
           <p class="status">Manuscript / preprint</p>
 
           <div class="publication-links" aria-label="Publication resources">
             <span class="publication-link" aria-disabled="true">
-              <span class="link-icon" aria-hidden="true">▤</span>
-              Paper
-              <small>soon</small>
+              <span aria-hidden="true">▤</span> Paper <small>soon</small>
             </span>
             <span class="publication-link" aria-disabled="true">
-              <span class="link-icon" aria-hidden="true">▶</span>
-              Video
-              <small>soon</small>
+              <span aria-hidden="true">▶</span> Video <small>soon</small>
             </span>
-            <a class="publication-link" href="#cad">
-              <span class="link-icon" aria-hidden="true">◇</span>
-              Viewer
+            <a class="publication-link" href="#interactive-grasps">
+              <span aria-hidden="true">◇</span> Viewer
             </a>
           </div>
+
+          <!-- <p class="project-thesis">
+            The Berkeley QUAD Hand combines quasi-direct-drive actuation with mechanical 
+            intelligence in an asymmetric design for targeted dexterity, strength, and efficiency.
+          </p> -->
         </div>
       </header>
 
-      <section class="teaser container-wide">
-        <img
-          src="./assets/images/frontpage.png"
-          width="2067"
-          height="823"
-          alt="Berkeley QUAD Hand overview"
-          fetchpriority="high"
-        >
-        <p class="caption">
-          The Berkeley QUAD Hand combines backdrivable quasi-direct-drive
-          actuation with mechanically intelligent coupling for passive grasp
-          adaptability, dexterity, and strength.
-        </p>
-      </section>
+      <section class="intro-section container-wide">
+        <figure class="graphical-abstract">
+          <img
+            src="./assets/images/frontpage.png?v=2"
+            width="3693"
+            height="1644"
+            alt="Berkeley QUAD Hand overview"
+            fetchpriority="high"
+          >
+        </figure>
 
-      <section class="section container" id="overview">
-        <h2>Abstract</h2>
-        <div class="prose">
-          <!-- <p>
-            The Berkeley QUAD Hand is a four-finger anthropomorphic robotic hand
-            with 11 degrees of freedom and 8 degrees of actuation. Typical hand designs
-            aim for uniformity across all fingers, resulting in a compromise of capabilities
-            across dexterity, sensitivity, and strength. In contrast,
-            rather than designing each finger to be identical, we apply intentional, bioinspired
-            asymmetry: the radial fingers are independently actuated for dexterity,
-            while the ulnar fingers are coupled on a single larger actuator for strength and efficiency. 
-            This design allows the hand to achieve a wide range of grasps while maintaining low reflected 
-            inertia and high force transparency.
-          </p>
-          <p>
-            Quasi-direct-drive actuators provide force transparency for
-            delicate interaction. A compliant linkage couples the middle and
-            ring fingers, allowing the ring finger to passively sweep inward
-            when a grasp becomes obstructed while sharing a larger, more
-            efficient actuator.
-          </p> -->
-          <p>
-            We present the Berkeley QUAD (\underline{Q}uasi-direct-drive, \underline{U}nderactuated,
-            \underline{A}symmetric \underline{D}esign) Hand, a four-finger anthropomorphic robotic hand 
-            with 11 degrees of freedom and 8 degrees of actuation. The design utilizes QDD actuation at 
-            the base of each finger, enabling high force transparency for dexterous, adaptive performance. 
-            However, the low torque density of these actuators traditionally presents major issues with 
-            size, weight, and thermal limits. We overcome this by applying bio-inspired asymmetry, 
-            delegating dexterity to the radial fingers through individual QDD actuation, and strength to 
-            the ulnar finger through an underactuated, compliantly coupled transmission driven by a larger 
-            QDD motor. A novel preloaded, linkage-based transmission permits this ulnar coupling in a way 
-            that preserves human-like workspace reachability. Under light loads, the ulnar motor drives 
-            the third (middle) finger directly for dexterity while the fourth (ring) finger mirrors its 
-            motion. However, under larger loads, the middle finger complies while the motor drives the 
-            ring finger further downwards and inwards toward the center of the grasp to apply better 
-            closure forces. Hardware evaluations validate this architecture, demonstrating that the 
-            hand achieves 29 out of 33 Feix taxonomy grasps and exhibits backdrive forces as low as 50 g 
-            for delicate interactions. Additionally, the underactuated fourth finger improves grasp 
-            closure and provides the spatial efficiency necessary for larger actuation, yielding up to 
-            a 96-fold reduction in heat generation during sustained loading.
-          </p>
-        </div>
-
-        <div class="highlights" aria-label="Key specifications">
-          <div><strong>4</strong><span>fingers</span></div>
-          <div><strong>11</strong><span>degrees of freedom</span></div>
-          <div><strong>8</strong><span>degrees of actuation</span></div>
-          <div><strong>~1 kg</strong><span>total mass</span></div>
-        </div>
-      </section>
-
-      <section class="section container-wide" id="media">
-        <h2>Video</h2>
-        <div class="media-placeholder">
-          <div class="placeholder-content">
-            <span class="placeholder-play" aria-hidden="true">▶</span>
-            <p>Demonstration video coming soon</p>
+        <div class="demos" id="demos">
+          <div class="video-grid video-grid-three">
+            <div class="video-frame video-frame-right">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Light demonstration"
+                src="./assets/videos/light.mp4"
+              ></video>
+            </div>
+            <div class="video-frame">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Narrow demonstration"
+                src="./assets/videos/narrow.mp4"
+              ></video>
+            </div>
+            <div class="video-frame">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Heavy demonstration"
+                src="./assets/videos/heavy.mp4"
+              ></video>
+            </div>
           </div>
         </div>
+
+        <div class="abstract container">
+          <h2>Abstract</h2>
+          <p>
+            We present the Berkeley QUAD (<b>Q</b>uasi-direct-drive,
+            <b>U</b>nderactuated, <b>A</b>symmetric <b>D</b>esign) Hand, a
+            four-finger anthropomorphic robotic hand with 11 degrees of freedom
+            and 8 degrees of actuation. Quasi-direct-drive actuation at the base
+            of each finger enables high force transparency for dexterous,
+            adaptive performance. We address the size, weight, and thermal
+            limits of these actuators through bio-inspired asymmetry: dexterity
+            is delegated to the independently actuated radial fingers, while a
+            larger actuator and compliant linkage provide strength and passive
+            adaptation on the ulnar side. Hardware evaluations demonstrate the 
+            efficiency of this reduced-DoA, asymmetric design: it achieves 29 of 
+            33 Feix taxonomy grasps, backdrive forces as low as 50 g, and up
+            to a 96-fold reduction in heat generation during sustained loading.
+          </p>
+        </div>
       </section>
 
-      <section class="section container-wide" id="design">
+      <section class="section container-wide section-rule" id="design">
         <h2>Design</h2>
-        <figure>
+
+        <p class="design-intro container">
+          Most robotic hands actuate each finger indepentently and identically 
+          (or nearly so). This leads to a common compromise across weight, strength,
+          and sensitivity, with different designs favoring one over the others.
+          Our design challenges this assumption -- do all fingers need the same
+          capabilities, or can we achieve better performance by specializing them?
+          We take inspiration from human hand function, providing the radial fingers
+          with independent QDD actuation for fine dexterity. On the other (side of)
+          the hand, the middle and ring fingers share a larger, more efficient motor 
+          through a compliant transmission. This saves palm volume and, after contact,
+          passively sweeps the ring finger inward for stronger grasp closure.
+        </p>
+
+        <figure class="mechanism-video">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="QUAD Hand CAD mechanism animation"
+            src="./assets/videos/cad_mechanism.mp4"
+          ></video>
+          <figcaption>
+            The ulnar coupling mechanism redirects actuator motion toward ring finger
+            grasp closure once the middle finger reaches contact.
+          </figcaption>
+        </figure>
+
+        <figure class="design-figure">
           <img
             src="./assets/images/hand_design.png"
             width="1723"
@@ -154,67 +175,99 @@
             loading="lazy"
           >
           <figcaption>
-            The hand has four fingers, 11 degrees of freedom, and 8 degrees of
-            actuation. A compliant linkage couples the middle and ring fingers,
-            producing inward ring-finger motion after the middle finger makes
-            contact.
+            The hand combines proximal QDD actuation with servo-based distal actuation 
+            (Dynamixel). The middle and ring fingers share a larger QDD actuator, coupled
+            together by a compliant ulnar transmission. This transmission acts as rigid
+            during free motion, but produces inward ring-finger motion after the middle 
+            finger makes contact.
           </figcaption>
         </figure>
 
-        <div class="two-column-copy container-narrow">
-          <div>
-            <h3>Backdrivable actuation</h3>
-            <p>
-              Quasi-direct-drive motors at the base of the radial fingers
-              provide low reflected inertia and sensitive contact response.
-            </p>
+        <div class="subsection" id="interactive-grasps">
+          <h3>Interactive grasps</h3>
+          <p class="section-intro">
+            Explore how the ulnar fingers adapt to different object geometries.
+          </p>
+
+          <div class="viewer-tabs" role="tablist" aria-label="Grasp visualization">
+            <button
+              id="tab-cylinder-large"
+              class="viewer-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="grasp-viewer"
+              data-viewer-src="../grasp_cylinder_large.viser?v=2"
+            >Large cylinder</button>
+            <button
+              id="tab-cylinder-small"
+              class="viewer-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="grasp-viewer"
+              data-viewer-src="../grasp_cylinder_small.viser?v=2"
+            >Small cylinder</button>
+            <button
+              id="tab-sphere-large"
+              class="viewer-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="grasp-viewer"
+              data-viewer-src="../grasp_sphere_large.viser?v=2"
+            >Large sphere</button>
+            <button
+              id="tab-sphere-small"
+              class="viewer-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="grasp-viewer"
+              data-viewer-src="../grasp_sphere_small.viser?v=2"
+            >Small sphere</button>
           </div>
-          <div>
-            <h3>Adaptive coupling</h3>
-            <p>
-              The middle and ring fingers share a larger actuator. The passive
-              ulnar transmission adds grasp closure without another motor.
-            </p>
+
+          <div class="viewer-frame">
+            <iframe
+              id="grasp-viewer"
+              role="tabpanel"
+              aria-labelledby="tab-cylinder-large"
+              title="Interactive QUAD Hand large cylinder grasp"
+              src="./viser/client/?playbackPath=..%2Fgrasp_cylinder_large.viser%3Fv%3D2"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
           </div>
+          <p class="viewer-help">
+            Drag to orbit and use the playback controls to scrub through each grasp.
+          </p>
         </div>
       </section>
 
-      <section class="section container-wide" id="results">
-        <h2>Grasping Results</h2>
-        <div class="result-grid">
-          <figure>
-            <h3>Grasp taxonomy</h3>
-            <img
-              src="./assets/images/taxonomy.png"
-              width="1063"
-              height="1065"
-              alt="QUAD Hand grasp taxonomy results"
-              loading="lazy"
-            >
-            <figcaption>
-              The hand achieves 29 of 33 Feix grasps and 10 of 11 Kapandji
-              opposition postures.
-            </figcaption>
-          </figure>
+      <section class="section container-wide section-rule" id="results">
+        <h2>Results</h2>
 
-          <figure>
-            <h3>Workspace</h3>
-            <img
-              src="./assets/images/workspace.png"
-              width="2007"
-              height="1887"
-              alt="QUAD Hand workspace analysis"
-              loading="lazy"
-            >
-            <figcaption>
-              Reachable finger workspaces and the passive inward-sweeping
-              trajectory of the ring finger.
-            </figcaption>
-          </figure>
-        </div>
+        <p class="results-intro container">
+          Hardware experiments demonstrate more practical outcomes of our design.
+          With QDD actuation, all fingers are force-sensitive, with the radial
+          fingers reaching backdrive forces as low as 50 g. This sensitivity
+          enables delicate manipulation and precise control at the cost of 
+          high power consumption and heat generation during sustained loading.
+          The ulnar fingers are less sensitive but more powerful and efficient,
+          supporting firm grasps and large static loads over time. Specifically,
+          we find that the shared actuator design reduces expected heat generation 
+          by up to 96 times compared to the independently actuated radial 
+          fingers&mdash;even when considering a load double in size.
+
+          In addition to efficiency, the hand broadly retains dexterity,
+          achieving 29 of 33 Feix grasps and 10 of 11 Kapandji opposition postures.
+          This is enabled by our novel ulnar mechanism, which passively preserves
+          human-like grasp closure with fewer degrees of actuation.
+        </p>
 
         <figure class="force-figure">
-          <h3>Force sensitivity and efficiency</h3>
+          <!-- <h3>Force sensitivity and efficiency</h3> -->
           <img
             src="./assets/images/force.png?v=2"
             width="8028"
@@ -223,82 +276,28 @@
             loading="lazy"
           >
           <figcaption>
-            Radial backdrive forces near 50 g and up to a 96-fold reduction
-            in heat generation from consolidated ulnar actuation.
+            Radial backdrive forces near 50 g and up to a 96-fold reduction in
+            heat generation from consolidated ulnar actuation.
+          </figcaption>
+        </figure>
+
+        <figure class="taxonomy-figure">
+          <h3>Grasp diversity</h3>
+          <img
+            src="./assets/images/taxonomy.png"
+            width="1063"
+            height="1065"
+            alt="QUAD Hand grasp taxonomy results"
+            loading="lazy"
+          >
+          <figcaption>
+            The hand achieves 29 of 33 Feix grasps and 10 of 11 Kapandji
+            opposition postures.
           </figcaption>
         </figure>
       </section>
 
-      <section class="section container-wide viewer-section" id="cad">
-        <h2>Interactive Grasps</h2>
-        <p class="section-intro">
-          Explore how the ulnar fingers adapt to different object geometries.
-        </p>
-
-        <div class="viewer-tabs" role="tablist" aria-label="Grasp visualization">
-          <button
-            id="tab-cylinder-large"
-            class="viewer-tab is-active"
-            type="button"
-            role="tab"
-            aria-selected="true"
-            aria-controls="grasp-viewer"
-            data-viewer-src="../grasp_cylinder_large.viser?v=2"
-          >
-            Large cylinder
-          </button>
-          <button
-            id="tab-cylinder-small"
-            class="viewer-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="grasp-viewer"
-            data-viewer-src="../grasp_cylinder_small.viser?v=2"
-          >
-            Small cylinder
-          </button>
-          <button
-            id="tab-sphere-large"
-            class="viewer-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="grasp-viewer"
-            data-viewer-src="../grasp_sphere_large.viser?v=2"
-          >
-            Large sphere
-          </button>
-          <button
-            id="tab-sphere-small"
-            class="viewer-tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-            aria-controls="grasp-viewer"
-            data-viewer-src="../grasp_sphere_small.viser?v=2"
-          >
-            Small sphere
-          </button>
-        </div>
-
-        <div class="viewer-frame">
-          <iframe
-            id="grasp-viewer"
-            role="tabpanel"
-            aria-labelledby="tab-cylinder-large"
-            title="Interactive QUAD Hand large cylinder grasp"
-            src="./viser/client/?playbackPath=..%2Fgrasp_cylinder_large.viser%3Fv%3D2"
-            loading="lazy"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <p class="viewer-help">
-          Drag to orbit and use the playback controls to scrub through each grasp.
-        </p>
-      </section>
-
-      <section class="section container" id="citation">
+      <section class="section container section-rule" id="citation">
         <h2>Citation</h2>
         <div class="citation-placeholder">
           Official BibTeX will be added when the manuscript is publicly available.
@@ -319,11 +318,7 @@
 
     <footer>
       <div class="container">
-        <p>Berkeley QUAD Hand · Embodied Dexterity Group · UC Berkeley</p>
-        <p>
-          Website style inspired by
-          <a href="https://nerfies.github.io/">Nerfies</a>.
-        </p>
+        <p>Website style inspired by <a href="https://nerfies.github.io/">Nerfies</a>.</p>
       </div>
     </footer>
   </body>
