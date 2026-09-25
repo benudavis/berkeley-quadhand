@@ -355,13 +355,20 @@ figcaption {
 }
 
 .citation-placeholder {
+  overflow-x: auto;
+  margin: 0;
   padding: 18px 22px;
   border-radius: 5px;
   color: #555;
   background: var(--light);
   font-family: var(--font-heading);
   font-size: 0.83rem;
+  line-height: 1.55;
+  tab-size: 2;
+  white-space: pre;
 }
+
+.citation-placeholder code { font: inherit; }
 
 .acknowledgments {
   padding-bottom: 68px;

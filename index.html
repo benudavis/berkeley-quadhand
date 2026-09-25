@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://benudavis.github.io/berkeley-quadhand/">
     <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="./styles.css?v=10">
+    <link rel="stylesheet" href="./styles.css?v=11">
     <script src="./viewer.js" defer></script>
     <title>Berkeley QUAD Hand</title>
   </head>
@@ -44,12 +44,12 @@
             <span><sup>1</sup>University of California, Berkeley</span>
             <span><sup>2</sup>General Motors</span>
           </div>
-          <p class="status">Manuscript / preprint</p>
+          <!-- <p class="status">Manuscript / preprint</p> -->
 
           <div class="publication-links" aria-label="Publication resources">
-            <span class="publication-link" aria-disabled="true">
-              <span aria-hidden="true">▤</span> Paper <small>soon</small>
-            </span>
+            <a class="publication-link" href="https://arxiv.org/abs/2609.27240">
+              <span aria-hidden="true">▤</span> arXiv
+            </a>
             <span class="publication-link" aria-disabled="true">
               <span aria-hidden="true">▶</span> Video <small>soon</small>
             </span>
@@ -299,9 +299,13 @@
 
       <section class="section container section-rule" id="citation">
         <h2>Citation</h2>
-        <div class="citation-placeholder">
-          Official BibTeX will be added when the manuscript is publicly available.
-        </div>
+        <pre class="citation-placeholder"><code>@misc{davis2026quadhand,
+  title  = {A Quasi-Direct-Drive Underactuated Asymmetric Hand for
+            Dexterous and Efficient Grasping and Manipulation},
+  author = {Benjamin Davis and Chase Kidder and Hannah S. Stuart},
+  year   = {2026},
+  eprint = {2609.27240}
+}</code></pre>
       </section>
 
       <section class="section container acknowledgments">
