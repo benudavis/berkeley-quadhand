@@ -1,6 +1,6 @@
 # Berkeley QUAD Hand project website
 
-Static project page for the manuscript **“A Quasi-Direct-Drive Underactuated Asymmetric Hand for Dexterous and Efficient Grasping and Manipulation.”**
+Static project page for **“A Quasi-Direct-Drive Underactuated Asymmetric Hand for Dexterous and Efficient Grasping and Manipulation,”** accepted to IEEE Humanoids 2026.
 
 The site uses plain HTML, CSS, and a small JavaScript file for switching viewer tabs. There is no runtime build step, package manager, analytics, or application server.
 
@@ -32,7 +32,7 @@ All site assets use relative paths so the page works from that project subdirect
 ## Content updates
 
 - Site-ready copies of manuscript figures live in `assets/images/`. The ignored `manuscript/` directory remains the source of truth for the paper.
-- Replace the paper and video status pills in `index.html` with links when those resources become public.
+- The header status line lists the venue (`IEEE Humanoids 2026`). Update it if the proceedings citation changes.
 - Demonstration and mechanism videos live in `assets/videos/` and are embedded
   as muted, looping MP4 files.
 - Add official citation text only after the preprint metadata is fixed.
